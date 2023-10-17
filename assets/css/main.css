@@ -83,10 +83,11 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  left: 95%;
-  top: 50%;
+  left: 50%;
+  top: -20px;
   transform: translate(-50%, -50%);
   animation: wave 2s infinite;
+
 }
 
 @keyframes wave {
@@ -170,8 +171,10 @@ main {
   line-height: 2;
 }
 
- label:hover {
- color: var(--main-bg-element);
+
+
+label:hover {
+  color: var(--main-bg-element);
 }
 
 .choose {
@@ -189,8 +192,7 @@ main {
 
   .question-number {
     font-size: 1rem;
-    left: 50%;
-    top: -20px;
+
   }
 
   .question h2 {
