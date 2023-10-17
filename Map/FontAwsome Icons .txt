@@ -1,0 +1,34 @@
+
+  <ul>
+    <!-- List of 30 Font Awesome icons you can use -->
+    <li><i class="fas fa-address-book"></i> Address Book</li>
+    <li><i class="fas fa-calendar"></i> Calendar</li>
+    <li><i class="fas fa-envelope"></i> Envelope</li>
+    <li><i class="fas fa-file"></i> File</li>
+    <li><i class="fas fa-check-circle"></i> Check Circle</li>
+    <li><i class="fas fa-star"></i> Star</li>
+    <li><i class="fas fa-cogs"></i> Cogs</li>
+    <li><i class="fas fa-globe"></i> Globe</li>
+    <li><i class="fas fa-book"></i> Book</li>
+    <li><i class="fas fa-users"></i> Users</li>
+    <li><i class="fas fa-desktop"></i> Desktop</li>
+    <li><i class="fas fa-edit"></i> Edit</li>
+    <li><i class="fas fa-lightbulb"></i> Lightbulb</li>
+    <li><i class="fas fa-comment"></i> Comment</li>
+    <li><i class="fas fa-flag"></i> Flag</li>
+    <li><i class="fas fa-clock"></i> Clock</li>
+    <li><i class="fas fa-thumbs-up"></i> Thumbs Up</li>
+    <li><i class="fas fa-chart-bar"></i> Chart Bar</li>
+    <li><i class="fas fa-graduation-cap"></i> Graduation Cap</li>
+    <li><i class="fas fa-microphone"></i> Microphone</li>
+    <li><i class="fas fa-trophy"></i> Trophy</li>
+    <li><i class="fas fa-bullhorn"></i> Bullhorn</li>
+    <li><i class="fas fa-search"></i> Search</li>
+    <li><i class="fas fa-smile"></i> Smile</li>
+    <li><i class="fas fa-handshake"></i> Handshake</li>
+    <li><i class="fas fa-exclamation-triangle"></i> Exclamation Triangle</li>
+    <li><i class="fas fa-question-circle"></i> Question Circle</li>
+    <li><i class="fas fa-list"></i> List</li>
+    <li><i class="fas fa-puzzle-piece"></i> Puzzle Piece</li>
+    <li><i class="fas fa-key"></i> Key</li>
+  </ul>

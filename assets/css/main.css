@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: #121212;
+  --main-text-color: #ddd;
+  --main-bg-element: #645CAA;
+  --effect-color: #1298e0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+
+
+header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 10px 20px;
+}
+
+header h1 {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+}
+
+header h1 span {
+  color: var(--main-bg-element);
+}
+
+header::before {
+  content: '';
+  width: 50%;
+  height: 2px;
+  background: #77777769;
+  position: absolute;
+  top: 100%;
+}
+
+
+/* Main */
+
+main {
+  margin: 20px auto;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+}
+
+.question-number {
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+ 
+  left: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: wave 2s infinite;
+  /* تطبيق الرسم البياني على العنصر */
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    /* حالة البداية */
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(2);
+    /* تكبير نصف الرسم البياني */
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    /* الحالة الأصلية */
+    opacity: 1;
+  }
+}
+
+.question-number::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-bg-element);
+  content: '';
+  position: absolute;
+  opacity: 0.8;
+  mix-blend-mode: color;
+  animation: ripple 3s infinite;
+  /* تطبيق الرسم البياني على العنصر الفرعي */
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.5);
+    /* حالة البداية */
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(.9);
+    /* حالة الذروة */
+    opacity: .4;
+  }
+
+  100% {
+    transform: scale(0.5);
+    /* الحالة الأصلية */
+    opacity: 0.8;
+  }
+}
+
+
+
+.progress-question {
+  width: 100%;
+}
+
+.progress-question .progress-bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-text-color);
+
+}
+
+
+.progress-load {
+  width: 20%;
+  height: 100%;
+  background: var(--effect-color);
+}
+
+
+
+
+
+
+.chooses-area {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  padding: 10px;
+  ;
+}
+
+.chooses-area input,
+.chooses-area label {
+  cursor: pointer;
+  transition: .3s;
+  font-size: 1.1rem;
+}
+
+.chooses-area label:hover {
+  color: var(--effect-color);
+}
