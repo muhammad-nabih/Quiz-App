@@ -170,8 +170,8 @@ main {
   line-height: 2;
 }
 
-choices-area label:hover {
-  color: var(--effect-color);
+ label:hover {
+ color: var(--main-bg-element);
 }
 
 .choose {
@@ -189,6 +189,8 @@ choices-area label:hover {
 
   .question-number {
     font-size: 1rem;
+    left: 50%;
+    top: -20px;
   }
 
   .question h2 {
