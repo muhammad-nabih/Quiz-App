@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Quiz App Test Task Exam">
   <title>Quiz App</title>
 
   <!-- Include your project's CSS -->
@@ -22,9 +22,11 @@
 
   <!-- Main content section -->
   <main>
-    <div class="question-number">
+    <!-- Question number -->
+    <article class="question-number">
       1
-    </div>
+    </article>
+
     <!-- Progress bar and question number section -->
     <section class="progress-question">
       <div class="progress-bar" data-progress="100%">
@@ -32,38 +34,31 @@
       </div>
     </section>
 
-    <!-- Question Area  -->
+    <!-- Question Area -->
+    <section class="question">
+      <h2>What's the task?</h2>
+    </section>
 
-
-    <div class="question">
-      <h2>what the task </h2>
-    </div>
-
-
-    <div class="chooses-area">
-      <div class="chose">
+    <!-- Choices Area -->
+    <section class="choices-area">
+      <div class="choose">
         <input type="radio" name="question" id="1">
-        <label for="1">choose one</label>
+        <label for="1">Choose one</label>
       </div>
-      <div class="chose">
+      <div class="choose">
         <input type="radio" name="question" id="2">
-        <label for="2">choose one</label>
+        <label for="2">Choose one</label>
       </div>
-
-      <div class="chose">
+      <div class="choose">
         <input type="radio" name="question" id="3">
-        <label for="3">choose one</label>
+        <label for="3">Choose one</label>
       </div>
-      <div class="chose">
+      <div class="choose">
         <input type="radio" name="question" id="4">
-        <label for="4">choose one</label>
+        <label for="4">Choose one</label>
       </div>
-
-    </div>
+    </section>
   </main>
-
-
-
 
   <!-- Include your project's JavaScript -->
   <script src="assets/js/main.js"></script>

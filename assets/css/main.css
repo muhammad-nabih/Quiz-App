@@ -11,15 +11,20 @@
   --main-text-color: #ddd;
   --main-bg-element: #645CAA;
   --effect-color: #1298e0;
+  --question-color: #a096f9;
 }
 
 body {
+  padding: 10px;
   font-family: 'Poppins', sans-serif;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
 }
 
-
+body.light {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+}
 
 header {
   width: 100%;
@@ -32,7 +37,6 @@ header {
 header h1 {
   letter-spacing: .1em;
   text-transform: uppercase;
-
 }
 
 header h1 span {
@@ -48,7 +52,6 @@ header::before {
   top: 100%;
 }
 
-
 /* Main */
 
 main {
@@ -61,40 +64,43 @@ main {
   position: relative;
 }
 
+.question {
+  margin-top: 10px;
+}
+
+.question h2 {
+  color: var(--question-color);
+}
+
 .question-number {
   position: absolute;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
- 
   left: 100%;
   top: 50%;
   transform: translate(-50%, -50%);
   animation: wave 2s infinite;
-  /* تطبيق الرسم البياني على العنصر */
 }
 
 @keyframes wave {
   0% {
     transform: translate(-50%, -50%) scale(1);
-    /* حالة البداية */
     opacity: 1;
   }
 
   50% {
     transform: translate(-50%, -50%) scale(2);
-    /* تكبير نصف الرسم البياني */
     opacity: 0.2;
   }
 
   100% {
     transform: translate(-50%, -50%) scale(1);
-    /* الحالة الأصلية */
     opacity: 1;
   }
 }
@@ -109,30 +115,24 @@ main {
   opacity: 0.8;
   mix-blend-mode: color;
   animation: ripple 3s infinite;
-  /* تطبيق الرسم البياني على العنصر الفرعي */
 }
 
 @keyframes ripple {
   0% {
     transform: scale(0.5);
-    /* حالة البداية */
     opacity: 0.8;
   }
 
   50% {
     transform: scale(.9);
-    /* حالة الذروة */
     opacity: .4;
   }
 
   100% {
     transform: scale(0.5);
-    /* الحالة الأصلية */
     opacity: 0.8;
   }
 }
-
-
 
 .progress-question {
   width: 100%;
@@ -141,37 +141,77 @@ main {
 .progress-question .progress-bar {
   width: 100%;
   height: 3px;
+  border-radius: 5px;
   background-color: var(--main-text-color);
-
 }
-
 
 .progress-load {
   width: 20%;
   height: 100%;
   background: var(--effect-color);
+  border-radius: inherit;
 }
 
-
-
-
-
-
-.chooses-area {
+.choices-area {
   display: flex;
   flex-direction: column;
   gap: .625rem;
   padding: 10px;
-  ;
+  width: 100%;
 }
 
-.chooses-area input,
-.chooses-area label {
+.choices-area input,
+.choices-area label {
   cursor: pointer;
   transition: .3s;
   font-size: 1.1rem;
 }
 
-.chooses-area label:hover {
+choices-area label:hover {
   color: var(--effect-color);
+}
+
+.choose {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  width: 100%;
+}
+
+/* Design for small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .question-number {
+    font-size: .9rem;
+  }
+
+  .question h2 {
+    font-size: 1.1rem;
+  }
+
+  .choices-area input,
+  .choices-area label {
+    font-size: .9rem;
+  }
+}
+
+/* Design for tablet screens */
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  /* Any additional adjustments needed for tablet screens */
+}
+
+/* Design for screens larger than 1024 pixels (computers) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  /* Any additional adjustments needed for computer screens */
 }
