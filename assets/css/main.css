@@ -166,7 +166,7 @@ main {
 .choices-area label {
   cursor: pointer;
   transition: .3s;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 2;
 }
 
@@ -184,7 +184,7 @@ choices-area label:hover {
 /* Design for small screens (e.g., mobile phones) */
 @media (max-width: 768px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .question-number {
