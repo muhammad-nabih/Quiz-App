@@ -181,11 +181,11 @@ choices-area label:hover {
 /* Design for small screens (e.g., mobile phones) */
 @media (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 1.1rem;
   }
 
   .question-number {
-    font-size: .9rem;
+    font-size: 1rem;
   }
 
   .question h2 {
@@ -194,14 +194,14 @@ choices-area label:hover {
 
   .choices-area input,
   .choices-area label {
-    font-size: .9rem;
+    font-size: 1.1rem;
   }
 }
 
 /* Design for tablet screens */
 @media (max-width: 1024px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   /* Any additional adjustments needed for tablet screens */
