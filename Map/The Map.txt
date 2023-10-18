@@ -1,9 +1,9 @@
 * Done✅
-^ In Progress⚙️⚙️
 01 - Creat JSON Object For Questions 
 02 - Start Creating HTML MARKUP  
 03 - Add  Dummy Data
 04 - Creat The Styling 
+^ In Progress⚙️⚙️
 05 - Fetch Number OF Questions From JSON Object 
 07 - Show The Number If Bullets Depend oOn Questions 
 08 - Set The Number For The Right And Wrong Answer 
