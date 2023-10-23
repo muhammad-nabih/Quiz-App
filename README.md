@@ -22,5 +22,5 @@ This project is developed using HTML, CSS, and JavaScript. The following compone
 1. Clone the project repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/quiz-app.git
+   git clone https://github.com/muhammad-nabih/quiz-app.git
    ```
