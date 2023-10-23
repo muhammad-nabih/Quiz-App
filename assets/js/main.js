@@ -1,83 +1,179 @@
-// Define DOM elements
-const questionNumber = document.querySelector(".question-number");
-const progressLoad = document.querySelector(".progress-load");
-const question = document.querySelector(".question h2");
-const choicesArea = document.querySelector(".choices-area");
-const submit = document.querySelector("#submit");
-const bulletsContainer = document.querySelector(".bullets");
-const spans = document.querySelector(".bullets .spans");
-const countdown = document.querySelector(".bullets .countdown");
+// DOM Elements
+const questionNumberElement = document.querySelector(".question-number");
+const questionElement = document.querySelector(".question h2");
+const parentQuestionElement = document.querySelector(".question");
+const choicesAreaElement = document.querySelector(".choices-area");
+const submitButton = document.querySelector("#submit");
+const bulletSpansElement = document.querySelector(".bullets .spans");
+const countdownElement = document.querySelector(".bullets .countdown");
+const progressLoadElement = document.querySelector(".progress-load");
 
-// Define global variables
-let indexQuestion = 0;
-
-// Function to retrieve data from a JSON object
-const loadData = async () => {
+// Initialize State
+let currentQuestionIndex = 0;
+let countLoader = 0;
+let result = 0;
+let total = 0;
+let minutes = 29;
+let seconds = 60;
+let timeDown;
+// Fetch data from the JSON file
+async function fetchData() {
   try {
     const response = await fetch("assets/js/data/data.json");
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
-    }
     const data = await response.json();
-    const spanLength = data.questions.length;
-    const countDownQuestion = data.questions.length;
-    questionNumber.textContent = countDownQuestion;
-    const questionElement = data.questions[indexQuestion].question;
-    const optionsElement = data.questions[indexQuestion].options;
-    addQuestionToPage(questionElement, optionsElement);
-    addSpansToPage(spanLength);
+    const totalQuestions = data.length;
+
+    // Create question bullets
+    createQuestionBullets(totalQuestions);
+
+    // Count Down Questions
+    questionNumberElement.textContent = totalQuestions;
+
+    // Display data on the page
+    displayQuestionData(data);
+
+    // Calculate the width to increment the progress bar
+    const loadWidth = 100 / totalQuestions;
+
+    // ^ Submit Click Handler
+    submitButton.onclick = () => {
+      if (currentQuestionIndex < totalQuestions) {
+        questionNumberElement.textContent--;
+        // Get the correct answer for the current question
+        const correctAnswer = data[currentQuestionIndex]["correct_answer"];
+        const checkedInput = document.querySelector(
+          "input[type=radio]:checked"
+        );
+
+        if (checkedInput && checkedInput.dataset.choice === correctAnswer) {
+          result += 10;
+        }
+
+        // Update the progress bar width
+        progressLoadElement.style.width =
+          parseFloat(progressLoadElement.style.width || "0") + loadWidth + "%";
+        countLoader += loadWidth;
+
+        total = totalQuestions;
+        showResult(totalQuestions, data);
+      }
+    };
   } catch (error) {
-    console.error(error);
-  }
-};
-
-// Call the loadData function to load the initial data
-loadData();
-
-// Function to add question and answer options to the page
-function addQuestionToPage(questionElement, options) {
-  question.innerHTML = questionElement;
-  let idCounter = 1;
-
-  for (let option of options) {
-    const choose = document.createElement("div");
-    choose.classList.add("choose");
-
-    const radioButton = document.createElement("input");
-    radioButton.type = "radio";
-    radioButton.name = "question";
-    radioButton.id = `option-${idCounter}`;
-
-    const label = document.createElement("label");
-    label.htmlFor = `option-${idCounter}`;
-    label.textContent = option;
-
-    idCounter++;
-
-    choose.appendChild(radioButton);
-    choose.appendChild(label);
-
-    choicesArea.appendChild(choose);
+    console.error("Error fetching data:", error);
   }
 }
 
+function showResult(totalQuestions, data) {
+  if (countLoader >= 100) {
+    // Display the result
+    clearData();
+    parentQuestionElement.classList.add("result");
+    questionElement.textContent = `Your Score: ${result} out of ${
+      totalQuestions * 10
+    }`;
+    clearInterval(timeDown)
+    countdownElement.style.flex="1"
+    countdownElement.style.fontSize="3rem"
+    questionElement.style.margin = "10px auto";
+    choicesAreaElement.innerHTML = "";
 
+    submitButton.style.display = "none"; // Hide the button
+  } else {
+    // Move to the next question
+    currentQuestionIndex++;
 
-//todo:Function To Add spans To page
-function addSpansToPage(spanLength) {
-  for (let i = 0; i < spanLength; i++) {
-    const span = document.createElement("span");
-    if (i === 0) {
-      span.classList.add("on"); // Add the "on" class to the first span
+    // Clear the previous choices
+    choicesAreaElement.innerHTML = "";
+
+    // Add Class On On The current span
+    const bulletSpansElement = document.querySelectorAll(".spans span");
+    if (currentQuestionIndex < totalQuestions) {
+      bulletSpansElement[currentQuestionIndex].classList.add("on");
     }
-    spans.appendChild(span);
+
+    // Display the next question
+    displayQuestionData(data);
   }
 }
 
-//todo Add event listeners and implement functionality
-submit.addEventListener("click", () => {
-  // Handle the submit button click event
-  // You can add your logic here
-});
+fetchData();
 
-// Implement other functionality as needed
+// Create question bullets
+function createQuestionBullets(totalQuestions) {
+  for (let i = 0; i < totalQuestions; i++) {
+    const bulletSpan = document.createElement("span");
+    bulletSpansElement.appendChild(bulletSpan);
+    if (i === 0) {
+      bulletSpan.classList.add("on");
+    }
+  }
+}
+
+// Display question data on the page
+function displayQuestionData(data) {
+  const currentQuestionAndOptionsData = data[currentQuestionIndex];
+
+  // Display the question text
+  questionElement.textContent = currentQuestionAndOptionsData["question"];
+
+  // Display answer options
+  currentQuestionAndOptionsData["options"].forEach((option, index) => {
+    // Call Back Component choose Area
+    choicesAreaElement.appendChild(createChoiceArea(option, index));
+  });
+}
+
+// Create a choice area with radio input and label
+function createChoiceArea(option, index) {
+  const chooseArea = document.createElement("div");
+  chooseArea.classList.add("choose");
+
+  const inputRadio = document.createElement("input");
+  inputRadio.type = "radio";
+  inputRadio.name = "choice";
+  inputRadio.setAttribute("data-choice", option);
+  inputRadio.id = `answer-${index}`;
+
+  const label = document.createElement("label");
+  label.htmlFor = `answer-${index}`;
+  label.textContent = option;
+
+  // Checked First Option
+  if (index === 0) inputRadio.checked = true;
+
+  chooseArea.appendChild(inputRadio);
+  chooseArea.appendChild(label);
+
+  return chooseArea;
+}
+
+function timerDown(totalQuestions) {
+  timeDown = setInterval(() => {
+    seconds--;
+    if (seconds === 0 && minutes === 0) {
+      // Display the result
+      clearInterval(timerDown);
+      clearData();
+      questionElement.textContent = `Your Score: ${result} out of ${
+        total * 10
+      }`;
+      parentQuestionElement.classList.add("result");
+    } else if (seconds === 0) {
+      minutes--;
+      seconds = 59;
+    }
+    countdownElement.textContent = `${minutes}:${
+      seconds > 10 ? seconds : "0" + seconds
+    }`;
+  }, 1000);
+  return timerDown;
+}
+
+timerDown();
+
+function clearData() {
+  choicesAreaElement.innerHTML = "";
+  questionElement.innerHTML = "";
+  submitButton.style.display = "none";
+  bulletSpansElement.innerHTML = "";
+}

@@ -1,129 +1,127 @@
-{
-  "questions": [
-    {
-      "question": "1. What does HTTP stand for in web programming?",
-      "options": [
-        "a) Hyperlink Text Transfer Protocol",
-        "b) Hypertext Transfer Protocol",
-        "c) High Traffic Transfer Protocol",
-        "d) Hyper Transfer Text Protocol"
-      ],
-      "correct_answer": "b) Hypertext Transfer Protocol"
-    },
-    {
-      "question": "2. What is the abbreviation for CSS?",
-      "options": [
-        "a) Computer Style Sheet",
-        "b) Creative Style System",
-        "c) Cascading Style Sheet",
-        "d) Colorful Style Sheet"
-      ],
-      "correct_answer": "c) Cascading Style Sheet"
-    },
-    {
-      "question": "3. What is the programming language of the web?",
-      "options": [
-        "a) Server-side Language",
-        "b) Web Programming Language",
-        "c) Scripting Language",
-        "d) Web Language"
-      ],
-      "correct_answer": "c) Scripting Language"
-    },
-    {
-      "question": "4. What programming language is used for developing mobile apps with React Native?",
-      "options": ["a) JavaScript", "b) Java", "c) C++", "d) Swift"],
-      "correct_answer": "a) JavaScript"
-    },
-    {
-      "question": "5. What is the fundamental building block of a web page?",
-      "options": ["a) HTML", "b) CSS", "c) JavaScript", "d) XML"],
-      "correct_answer": "a) HTML"
-    },
-    {
-      "question": "6. What does API stand for in web programming?",
-      "options": [
-        "a) Advanced Programming Interface",
-        "b) Application Programming Interface",
-        "c) Advanced Protocol Interface",
-        "d) Application Protocol Interface"
-      ],
-      "correct_answer": "b) Application Programming Interface"
-    },
-    {
-      "question": "7. What is the language used for adding dynamic behavior to web pages?",
-      "options": ["a) HTML", "b) CSS", "c) JavaScript", "d) Python"],
-      "correct_answer": "c) JavaScript"
-    },
-    {
-      "question": "8. What is the abbreviation for HTML?",
-      "options": [
-        "a) Hypertext Markup Language",
-        "b) High Traffic Markup Language",
-        "c) Hyper Transfer Text Language",
-        "d) High Tech Multimedia Language"
-      ],
-      "correct_answer": "a) Hypertext Markup Language"
-    },
-    {
-      "question": "9. What is the abbreviation for SQL?",
-      "options": [
-        "a) Structured Query Language",
-        "b) System Query Language",
-        "c) Server Query Language",
-        "d) Standard Query Language"
-      ],
-      "correct_answer": "a) Structured Query Language"
-    },
-    {
-      "question": "10. What is the programming language used in Android app development?",
-      "options": ["a) Java", "b) JavaScript", "c) Python", "d) Ruby"],
-      "correct_answer": "a) Java"
-    },
-    {
-      "question": "11. What does URL stand for?",
-      "options": [
-        "a) Universal Resource Locator",
-        "b) Uniform Resource Locator",
-        "c) Universal Request Locator",
-        "d) Uniform Request Locator"
-      ],
-      "correct_answer": "b) Uniform Resource Locator"
-    },
-    {
-      "question": "12. What is the most popular web server?",
-      "options": ["a) Apache", "b) Nginx", "c) IIS", "d) Tomcat"],
-      "correct_answer": "a) Apache"
-    },
-    {
-      "question": "13. What is the abbreviation for CMS?",
-      "options": [
-        "a) Content Management System",
-        "b) Code Management System",
-        "c) Content Markup System",
-        "d) Creative Management System"
-      ],
-      "correct_answer": "a) Content Management System"
-    },
-    {
-      "question": "14. What is the abbreviation for SSL?",
-      "options": [
-        "a) Secure Socket Layer",
-        "b) Server Security Layer",
-        "c) Simple Secure Layer",
-        "d) Standard Socket Layer"
-      ],
-      "correct_answer": "a) Secure Socket Layer"
-    },
-    {
-      "question": "15. What is the primary element for executing server-side programming in web development?",
-      "options": [
-        "a) HTML",
-        "b) CSS",
-        "c) JavaScript",
-        "d) Server-side Scripting Language"
-      ],
-      "correct_answer": "d) Server-side Scripting Language"
-    }
-  ]
-}
+[
+  {
+    "question": "1. What does HTTP stand for in web programming?",
+    "options": [
+      "a) Hyperlink Text Transfer Protocol",
+      "b) Hypertext Transfer Protocol",
+      "c) High Traffic Transfer Protocol",
+      "d) Hyper Transfer Text Protocol"
+    ],
+    "correct_answer": "b) Hypertext Transfer Protocol"
+  },
+  {
+    "question": "2. What is the abbreviation for CSS?",
+    "options": [
+      "a) Computer Style Sheet",
+      "b) Creative Style System",
+      "c) Cascading Style Sheet",
+      "d) Colorful Style Sheet"
+    ],
+    "correct_answer": "c) Cascading Style Sheet"
+  },
+  {
+    "question": "3. What is the programming language of the web?",
+    "options": [
+      "a) Server-side Language",
+      "b) Web Programming Language",
+      "c) Scripting Language",
+      "d) Web Language"
+    ],
+    "correct_answer": "c) Scripting Language"
+  },
+  {
+    "question": "4. What programming language is used for developing mobile apps with React Native?",
+    "options": ["a) JavaScript", "b) Java", "c) C++", "d) Swift"],
+    "correct_answer": "a) JavaScript"
+  },
+  {
+    "question": "5. What is the fundamental building block of a web page?",
+    "options": ["a) HTML", "b) CSS", "c) JavaScript", "d) XML"],
+    "correct_answer": "a) HTML"
+  },
+  {
+    "question": "6. What does API stand for in web programming?",
+    "options": [
+      "a) Advanced Programming Interface",
+      "b) Application Programming Interface",
+      "c) Advanced Protocol Interface",
+      "d) Application Protocol Interface"
+    ],
+    "correct_answer": "b) Application Programming Interface"
+  },
+  {
+    "question": "7. What is the language used for adding dynamic behavior to web pages?",
+    "options": ["a) HTML", "b) CSS", "c) JavaScript", "d) Python"],
+    "correct_answer": "c) JavaScript"
+  },
+  {
+    "question": "8. What is the abbreviation for HTML?",
+    "options": [
+      "a) Hypertext Markup Language",
+      "b) High Traffic Markup Language",
+      "c) Hyper Transfer Text Language",
+      "d) High Tech Multimedia Language"
+    ],
+    "correct_answer": "a) Hypertext Markup Language"
+  },
+  {
+    "question": "9. What is the abbreviation for SQL?",
+    "options": [
+      "a) Structured Query Language",
+      "b) System Query Language",
+      "c) Server Query Language",
+      "d) Standard Query Language"
+    ],
+    "correct_answer": "a) Structured Query Language"
+  },
+  {
+    "question": "10. What is the programming language used in Android app development?",
+    "options": ["a) Java", "b) JavaScript", "c) Python", "d) Ruby"],
+    "correct_answer": "a) Java"
+  },
+  {
+    "question": "11. What does URL stand for?",
+    "options": [
+      "a) Universal Resource Locator",
+      "b) Uniform Resource Locator",
+      "c) Universal Request Locator",
+      "d) Uniform Request Locator"
+    ],
+    "correct_answer": "b) Uniform Resource Locator"
+  },
+  {
+    "question": "12. What is the most popular web server?",
+    "options": ["a) Apache", "b) Nginx", "c) IIS", "d) Tomcat"],
+    "correct_answer": "a) Apache"
+  },
+  {
+    "question": "13. What is the abbreviation for CMS?",
+    "options": [
+      "a) Content Management System",
+      "b) Code Management System",
+      "c) Content Markup System",
+      "d) Creative Management System"
+    ],
+    "correct_answer": "a) Content Management System"
+  },
+  {
+    "question": "14. What is the abbreviation for SSL?",
+    "options": [
+      "a) Secure Socket Layer",
+      "b) Server Security Layer",
+      "c) Simple Secure Layer",
+      "d) Standard Socket Layer"
+    ],
+    "correct_answer": "a) Secure Socket Layer"
+  },
+  {
+    "question": "15. What is the primary element for executing server-side programming in web development?",
+    "options": [
+      "a) HTML",
+      "b) CSS",
+      "c) JavaScript",
+      "d) Server-side Scripting Language"
+    ],
+    "correct_answer": "d) Server-side Scripting Language"
+  }
+]
