@@ -260,6 +260,13 @@ label:hover {
   color: var(--effect-color);
   font-size: 1.3em;
   user-select: none;
+  position: relative;
+}
+
+.countdown::before {
+  content: 'Time waits for you: ';
+  text-transform: capitalize;
+  color: var(--main-text-color);
 }
 
 /* Submit Button Styles */
@@ -296,12 +303,17 @@ label:hover {
     font-size: 1rem;
   }
 
+  main {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
   .question-number {
     font-size: .8rem;
   }
 
   .question h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .choices-area input,
@@ -323,21 +335,27 @@ label:hover {
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 5px;
+    padding: 10px;
+    margin: 10px auto;
   }
 
   .spans>span {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #777;
     flex: 1;
-    padding: 2px;
+
   }
 
   .countdown {
-    padding: 4px;
-    font-size: 1em;
+    padding: 5px 1px;
+    font-size: 1.2rem;
+  }
+
+  .bullets {
+    gap: 12px;
+    flex-direction: column;
   }
 }
 
@@ -365,4 +383,28 @@ label:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.result::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: var(--main-bg-element);
+  transform: translate(-50%, -22px);
+
+}
+
+
+.your-result {
+
+  padding: 4px;
+  margin: 0 3px;
+  color: var(--main-text-color);
+  font-size: 1.2rem;
 }

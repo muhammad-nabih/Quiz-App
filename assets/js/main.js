@@ -68,12 +68,12 @@ function showResult(totalQuestions, data) {
     // Display the result
     clearData();
     parentQuestionElement.classList.add("result");
-    questionElement.textContent = `Your Score: ${result} out of ${
+    questionElement.innerHTML = `Your Score:<span class="your-result">${result}</span>  out of ${
       totalQuestions * 10
     }`;
     clearInterval(timeDown)
     countdownElement.style.flex="1"
-    countdownElement.style.fontSize="3rem"
+    countdownElement.style.fontSize="1.2rem"
     questionElement.style.margin = "10px auto";
     choicesAreaElement.innerHTML = "";
 

@@ -78,50 +78,5 @@
     "question": "10. What is the programming language used in Android app development?",
     "options": ["a) Java", "b) JavaScript", "c) Python", "d) Ruby"],
     "correct_answer": "a) Java"
-  },
-  {
-    "question": "11. What does URL stand for?",
-    "options": [
-      "a) Universal Resource Locator",
-      "b) Uniform Resource Locator",
-      "c) Universal Request Locator",
-      "d) Uniform Request Locator"
-    ],
-    "correct_answer": "b) Uniform Resource Locator"
-  },
-  {
-    "question": "12. What is the most popular web server?",
-    "options": ["a) Apache", "b) Nginx", "c) IIS", "d) Tomcat"],
-    "correct_answer": "a) Apache"
-  },
-  {
-    "question": "13. What is the abbreviation for CMS?",
-    "options": [
-      "a) Content Management System",
-      "b) Code Management System",
-      "c) Content Markup System",
-      "d) Creative Management System"
-    ],
-    "correct_answer": "a) Content Management System"
-  },
-  {
-    "question": "14. What is the abbreviation for SSL?",
-    "options": [
-      "a) Secure Socket Layer",
-      "b) Server Security Layer",
-      "c) Simple Secure Layer",
-      "d) Standard Socket Layer"
-    ],
-    "correct_answer": "a) Secure Socket Layer"
-  },
-  {
-    "question": "15. What is the primary element for executing server-side programming in web development?",
-    "options": [
-      "a) HTML",
-      "b) CSS",
-      "c) JavaScript",
-      "d) Server-side Scripting Language"
-    ],
-    "correct_answer": "d) Server-side Scripting Language"
   }
 ]
